@@ -9,11 +9,15 @@ Usiamo i nuovi metodi degli array foreach o filter.
 */
 
 const array = ["luca", "marco", "livo", "artu", "spina"]
+numberUno = 1
+numberdue = 4
 
-function myFunctio(array,numberUno, numberdue){
+function myFunction(array,numberUno, numberdue){
     array.forEach((element, index) => {
         console.log(element)
+        return element
     });
+    return array
 }
 
-console.log(myFunctio())
+console.log(myFunction(array))
