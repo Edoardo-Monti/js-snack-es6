@@ -10,7 +10,7 @@ Stampare a schermo la bici con peso minore utilizzando destructuring e template 
 const array = [
     {
       name: 'Bici 1',
-      peso: '22',
+      peso: '27',
     },
     {
       name: 'Bici 2',
@@ -22,13 +22,14 @@ const array = [
     },
     {
       name: 'Bici 4',
-      peso: '53'
+      peso: '12'
     },
     {
       name: 'Bici 5',
       peso: '28'
     },
 ]
+
 
 for(let i = 0; i < array.length; i++){
     
@@ -37,8 +38,17 @@ for(let i = 0; i < array.length; i++){
 
     //prendiamo ogni valore delle chiavi
     const{name, peso} = obj
-    console.log(name)
-    console.log(peso)
+    // console.log(name)
+    // console.log(parseInt(peso)) 
+
+    if(peso < array[0].peso){
+        array[0].peso = obj.peso    
+        array[0].name = obj.name
+    }
+    
 }
+
+document.querySelector("div").innerHTML += `${array[0]}`
+console.log(array[0])
 
 
