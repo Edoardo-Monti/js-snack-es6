@@ -14,19 +14,22 @@ b = 4
 
 //creo una funzione 
 function myFunction(array,a, b){
-    //prendo ogni elemento del mio array con la posizione
-    // array.forEach((element, index) => {
-    //     console.log(element, index)
-        
-    //     return element
-    // });
-    let array2 = array.filter((element, index) => element.index > a && element.index < b)
-        console.log(array2)
-    return array2
+    //mi crea un array che mi prende le posizioni comprese tra "a" e "b"
+    const prova = array.filter((element, index) => {
+        if(index > a && index < b){
+            return true
+        }else{
+            return false
+        }
+    })
+    
+    console.log(prova)
 }
+myFunction(array,a,b)
 
-console.log(myFunction(array))
+
+//versione corta senza if/else
 
 //mi crea un array che mi prende le posizioni comprese tra "a" e "b"
-let array2 = array.filter((element, index) => index > a && index < b)
-console.log(array2)
+// let array2 = array.filter((element, index) => index > a && index < b)
+// console.log(array2)
