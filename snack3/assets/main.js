@@ -9,14 +9,19 @@ Usiamo i nuovi metodi degli array foreach o filter.
 */
 
 const array = ["luca", "marco", "livo", "artu", "spina"]
-numberUno = 1
-numberdue = 4
+a = 1
+b = 4
 
-function myFunction(array,numberUno, numberdue){
-    array.forEach((element, index) => {
-        console.log(element)
-        return element
-    });
+//creo una funzione 
+function myFunction(array,a, b){
+    //prendo ogni elemento del mio array con la posizione
+    // array.forEach((element, index) => {
+    //     console.log(element, index)
+        
+    //     return element
+    // });
+    let array2 = array.filter(pippo => index > a && index < b)
+        console.log(array2)
     return array
 }
 
