@@ -20,9 +20,13 @@ function myFunction(array,a, b){
         
     //     return element
     // });
-    let array2 = array.filter(pippo => index > a && index < b)
+    let array2 = array.filter((element, index) => element.index > a && element.index < b)
         console.log(array2)
-    return array
+    return array2
 }
 
 console.log(myFunction(array))
+
+//mi crea un array che mi prende le posizioni comprese tra "a" e "b"
+let array2 = array.filter((element, index) => index > a && index < b)
+console.log(array2)
