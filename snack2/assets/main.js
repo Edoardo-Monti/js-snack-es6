@@ -7,3 +7,47 @@ Punti fatti e falli subiti.
 Infine usando la destrutturazione creiamo un nuovo array i cui elementi contengono solo nomi e falli subiti e stampiamo tutto in console.
 
 */
+
+const squadre = [
+    {
+        name: 'Milan',
+        puntiFatti: '0',
+        falliSubiti: '0'
+    },
+    {
+        name: 'Inter',
+        puntiFatti: '0',
+        falliSubiti: '0'
+    },
+    {
+        name: 'Juve',
+        puntiFatti: '0',
+        falliSubiti: '0'
+    },
+    {
+        name: 'Roma',
+        puntiFatti: '0',
+        falliSubiti: '0'
+    },
+    {
+        name: 'Lazio',
+        puntiFatti: '0',
+        falliSubiti: '0'
+    },
+]
+
+function Random() {
+    let randomNumber = Math.floor(Math.random()*50)+1;
+    return randomNumber
+}
+
+
+squadre.forEach(element => {
+    
+    element.falliSubiti = Random()
+    element.puntiFatti = Random()
+    console.log(element)
+})
+
+
+
