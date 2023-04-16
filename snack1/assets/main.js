@@ -47,8 +47,8 @@ for(let i = 0; i < array.length; i++){
     }
     
 }
-
-document.querySelector("div").innerHTML += `${array[0]}`
 console.log(array[0])
+document.querySelector("div").innerHTML += `la ${array[0].name} ha il peso minore`
+
 
 
