@@ -36,18 +36,35 @@ const squadre = [
     },
 ]
 
+//funzione che genera un numero random
 function Random() {
     let randomNumber = Math.floor(Math.random()*50)+1;
     return randomNumber
 }
 
-
+//ciclo che mi prende ogni elemnto dell'array
 squadre.forEach(element => {
     
+    //sovrascrivo il valore delle chiavi con la funzione custom
     element.falliSubiti = Random()
     element.puntiFatti = Random()
+    // console.log(element)
+
+    const {puntiFatti, name, falliSubiti} = element
+    delete element.puntiFatti
     console.log(element)
+    
 })
 
+// //con map creo un altro array 
+// const array2 = squadre.map (element => {
+//     const {puntiFatti, name, falliSubiti} = element
+//     console.log(element)
+//     delete puntiFatti
 
+// })
+
+
+
+// document.querySelector("body").innerHTML += `<div>${array2}</div>`
 
