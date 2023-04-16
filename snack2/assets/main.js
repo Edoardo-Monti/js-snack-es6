@@ -48,23 +48,28 @@ squadre.forEach(element => {
     //sovrascrivo il valore delle chiavi con la funzione custom
     element.falliSubiti = Random()
     element.puntiFatti = Random()
-    // console.log(element)
-
-    const {puntiFatti, name, falliSubiti} = element
-    delete element.puntiFatti
-    console.log(element)
+    // console.log(elemen
     
 })
 
-// //con map creo un altro array 
-// const array2 = squadre.map (element => {
-//     const {puntiFatti, name, falliSubiti} = element
-//     console.log(element)
-//     delete puntiFatti
+//con map creo un altro array 
+const array2 = squadre.map (element => {
+    // const {puntiFatti, name, falliSubiti} = element
+    
+    //tolgo un chiave
+    delete element.puntiFatti
+    console.log(element)
+    return element
+})
 
-// })
+console.log(array2)
+
+//faccio un ciclo per stampare ogni elemento
+array2.forEach(element =>{
+    const {puntiFatti, name, falliSubiti} = element
+    document.querySelector("body").innerHTML += name + falliSubiti
+
+})
 
 
-
-// document.querySelector("body").innerHTML += `<div>${array2}</div>`
 
