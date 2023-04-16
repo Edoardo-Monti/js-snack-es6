@@ -9,8 +9,8 @@ Usiamo i nuovi metodi degli array foreach o filter.
 */
 
 const array = ["luca", "marco", "livo", "artu", "spina"]
-a = 1
-b = 4
+// a = 1
+// b = 4
 
 //creo una funzione 
 function myFunction(array,a, b){
@@ -25,7 +25,7 @@ function myFunction(array,a, b){
     
     console.log(prova)
 }
-myFunction(array,a,b)
+myFunction(array,1,4)
 
 
 //versione corta senza if/else
