@@ -36,19 +36,22 @@ for(let i = 0; i < array.length; i++){
     //prendiamo ogni singolo elemnto dell' array
     let obj = array[i]
 
-    //prendiamo ogni valore delle chiavi
-    const{name, peso} = obj
+    
     // console.log(name)
     // console.log(parseInt(peso)) 
 
-    if(peso < array[0].peso){
+    if(obj.peso < array[0].peso){
         array[0].peso = obj.peso    
         array[0].name = obj.name
     }
     
 }
 console.log(array[0])
-document.querySelector("div").innerHTML += `la ${array[0].name} ha il peso minore`
+
+//prendiamo ogni valore delle chiavi
+const{name, peso} = array[0]
+
+document.querySelector("div").innerHTML += `la ${name} ha il peso minore ed il suo peso è ${peso}`
 
 
 
